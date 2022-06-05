@@ -363,6 +363,10 @@ void lobby_mouseCallback(ObjectID object, int x, int y, MouseAction action)
 		}
 	}
 	else if (object == startbutton) {
+		p_HP_barX = 0;
+		m_HP_barX = 0;
+		locateObject(m_HP_bar, gamescene, m_HP_barX, m_HP_barY);
+		locateObject(p_HP_bar, gamescene, p_HP_barX, p_HP_barY);
 		startTimer(lobby_timer1);
 		enterScene(store);
 	}
