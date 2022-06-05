@@ -141,9 +141,9 @@ void endgamescene()
 	locateObject(m_HP_bar, gamescene, m_HP_barX, m_HP_barY);
 	locateObject(p_HP_bar, gamescene, p_HP_barX, p_HP_barY);
 	m_att += 20;					//몬스터 공격력 증가
-	m_movetime -= 0.5f;				//몬스터 이동시간 감소
+	m_movetime = m_movetime * 0.8;				//몬스터 이동시간 감소
 	m_warning = m_warning * 0.8;	
-	m_beam = m_beam * 1.2;			
+	m_beam = m_beam * 0.8;			
 
 	enterScene(store);
 }
@@ -190,6 +190,8 @@ void gameover()
 	att = 50;
 	m_att = 101;
 	m_movetime = 4.0f;
+	m_warning = 0.5f;
+	m_beam = 0.5f;
 }
 
 void damage_check()
