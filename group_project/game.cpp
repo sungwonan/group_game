@@ -139,7 +139,9 @@ void endgamescene()
 	p_HP_barX = 0;//플레이어 몬스터 체력 초기화
 	m_HP_barX = 0;
 	locateObject(m_HP_bar, gamescene, m_HP_barX, m_HP_barY);
+	showObject(m_HP_bar);
 	locateObject(p_HP_bar, gamescene, p_HP_barX, p_HP_barY);
+	showObject(p_HP_bar);
 	m_att += 20;					//몬스터 공격력 증가
 	m_movetime = m_movetime * 0.8;				//몬스터 이동시간 감소
 	m_warning = m_warning * 0.8;	
@@ -366,7 +368,10 @@ void lobby_mouseCallback(ObjectID object, int x, int y, MouseAction action)
 		p_HP_barX = 0;
 		m_HP_barX = 0;
 		locateObject(m_HP_bar, gamescene, m_HP_barX, m_HP_barY);
+		showObject(m_HP_bar);
 		locateObject(p_HP_bar, gamescene, p_HP_barX, p_HP_barY);
+		showO
+			bject(p_HP_bar);
 		startTimer(lobby_timer1);
 		enterScene(store);
 	}
